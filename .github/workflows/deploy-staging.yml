@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  CLOUDFLARE_ENV: staging
+
 jobs:
   checks:
     uses: ./.github/workflows/_checks.yml

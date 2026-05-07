@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*.*.*'
 
+env:
+  CLOUDFLARE_ENV: prod
+
 jobs:
   checks:
     uses: ./.github/workflows/_checks.yml
