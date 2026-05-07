@@ -1,0 +1,35 @@
+name: Checks
+
+on:
+  workflow_call:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit
+        # Uses audit-ci with allowlist in audit-ci.jsonc.
+        # Fails on moderate+ severity. Exceptions reviewed in SECURITY.md.
+        # Expiry dates force periodic re-evaluation.
+        run: npx audit-ci@^7 --config ./audit-ci.jsonc
+
+      - name: Run typecheck
+        run: npm run typecheck
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run build
+        run: npm run build

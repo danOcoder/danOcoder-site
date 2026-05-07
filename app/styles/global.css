@@ -1,0 +1,21 @@
+/*
+ * GLOBAL STYLES
+ * =============
+ * This file is for:
+ *   - CSS custom properties (--var-name)
+ *   - Third-party library overrides
+ *   - Base resets that apply site-wide
+ *
+ * This file is NOT for:
+ *   - Component-specific styles (use component files or Tailwind classes)
+ *   - One-off utilities (see utilities.css or use arbitrary values)
+ *   - Page-specific styles
+ *
+ * When in doubt, ask: "Does EVERY page need this?" If not, it doesn't belong here.
+ */
+
+:root {
+  /* fix scroll bounce, can safely be removed if you want scroll bounce */
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}

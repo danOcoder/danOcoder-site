@@ -1,0 +1,13 @@
+/*
+ *  TW THEME
+ * =============
+ * This file is for:
+ *   - Extending the default TW theme
+ *   - Overriding the default TW theme
+ *   - Custom TW utility functions
+ *
+ * For more info see the full documentation https://tailwindcss.com/docs/theme
+ */
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';

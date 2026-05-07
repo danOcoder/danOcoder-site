@@ -6,6 +6,10 @@
     "module": "esnext",
     "types": ["vite/client"],
     "skipLibCheck": true,
+    "strict": true,
+    "paths": {
+      "~/*": ["./app/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -14,6 +18,7 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "rootDirs": ["."],
 
     /* Linting */
     "noUnusedLocals": true,
@@ -21,5 +26,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["app"]
 }
